@@ -1,6 +1,9 @@
 ﻿@model List<Student>
 
 <div>
+    <div>
+        <button><a class="nav-link" asp-controller="Student" asp-action="Create">Create New</a></button>
+    </div>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -16,7 +19,7 @@
             @foreach (var student in Model)
             {
                 <tr>
-                    <td>@student.FirstName</td>
+                    <td><a asp-controller="Student" asp-action="Create" asp-route-id="@student.StudentId">@student.FirstName</a></td>
                     <td>@student.MiddleName</td>
                     <td>@student.LastName</td>
                     <td>@student.Phone</td>

@@ -1375,11 +1375,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Stuff\\Sample Projects\\StudentRecordManagement\\StudentRecordManagement.csproj",
+      "projectUniqueName": "D:\\Projects\\StudentRecordManagement\\StudentRecordManagement\\StudentRecordManagement.csproj",
       "projectName": "StudentRecordManagement",
-      "projectPath": "D:\\Stuff\\Sample Projects\\StudentRecordManagement\\StudentRecordManagement.csproj",
+      "projectPath": "D:\\Projects\\StudentRecordManagement\\StudentRecordManagement\\StudentRecordManagement.csproj",
       "packagesPath": "C:\\Users\\Hassan\\.nuget\\packages\\",
-      "outputPath": "D:\\Stuff\\Sample Projects\\StudentRecordManagement\\obj\\",
+      "outputPath": "D:\\Projects\\StudentRecordManagement\\StudentRecordManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hassan\\AppData\\Roaming\\NuGet\\NuGet.Config",
