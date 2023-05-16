@@ -1,4 +1,6 @@
-﻿namespace StudentRecordManagement.Models
+﻿using Microsoft.AspNetCore.Razor.Language.Intermediate;
+
+namespace StudentRecordManagement.Models
 {
     public class Student
     {
@@ -10,5 +12,7 @@
         public string Address { get; set; }
         public string ClassName { get; set; }
         public int ClassId { get; set; }
+
+        public StudentClass StudentClass { get; set; }
     }
 }

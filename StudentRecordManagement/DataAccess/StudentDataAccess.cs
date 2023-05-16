@@ -90,5 +90,42 @@ namespace StudentRecordManagement.DataAccess
             ////Sql Reader
             return command.ExecuteNonQuery();
         }
+
+        public int UpdateStudent(Student student)
+        {
+            var studentList = new List<Student>();
+
+            // Sql Connection
+            SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=StudentRecord;User Id=sa;Password=p@ssw0rd; MultipleActiveResultSets=true");
+            connection.Open();
+
+            string query =
+                "Update Student set StudentFirstName =@sfName, StudentMiddleName =  @smName, StudentLastName = @slName, StudentPhone= @sPhone, StudentAddress = @sAddress where studentId = " + student.StudentId;
+            ////Sql Command
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@sfName", student.FirstName);
+            command.Parameters.AddWithValue("@smName", student.MiddleName);
+            command.Parameters.AddWithValue("@slName", student.LastName);
+            command.Parameters.AddWithValue("@sPhone", student.Phone);
+            command.Parameters.AddWithValue("@sAddress", student.Address);
+            ////Sql Reader
+            return command.ExecuteNonQuery();
+        }
+
+        public int DeleteStudent(int studentId)
+        {
+            var studentList = new List<Student>();
+
+            // Sql Connection
+            SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=StudentRecord;User Id=sa;Password=p@ssw0rd; MultipleActiveResultSets=true");
+            connection.Open();
+
+            string query =
+                "Delete from Student where studentId = " + studentId;
+            ////Sql Command
+            SqlCommand command = new SqlCommand(query, connection);
+            ////Sql Reader
+            return command.ExecuteNonQuery();
+        }
     }
 }
