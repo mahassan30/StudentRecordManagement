@@ -20,9 +20,6 @@ namespace StudentRecordManagement.Controllers
         public IActionResult Index()
         {
             var students = dbContext.Students.Select(x=> x.ConvertToWebModel()).ToList();
-
-            //var studentDataAccess = new StudentDataAccess();
-            //var studentList = studentDataAccess.GetStudentList();
             return View(students);
         }
 
@@ -30,7 +27,7 @@ namespace StudentRecordManagement.Controllers
         {
             var viewModel = new CreateStudentViewModel();
 
-            //viewModel.Classes = dbContext.Classes.ToList();
+            viewModel.Classes = dbContext.Classes.Select(x=>x.ConvertToWebModel()).ToList();
             if (id == null)
             {
                 viewModel.Student = new Student();
@@ -46,17 +43,15 @@ namespace StudentRecordManagement.Controllers
         [HttpPost]
         public ActionResult Create(Student student)
         {
-            var studentDataAccess = new StudentDataAccess();
+            var studentToSave = student.ConvertToDomainModel();
             if (student.StudentId > 0)
             {
-                dbContext.Update(student);
-                //var updateStudent = studentDataAccess.UpdateStudent(student);
+                dbContext.Update(studentToSave);
             }
             else
             {
-                dbContext.Add(student);
+                dbContext.Add(studentToSave);
             }
-            //var saveStudent = studentDataAccess.SaveStudent(student);
 
             dbContext.SaveChanges();
             return RedirectToAction("Index");

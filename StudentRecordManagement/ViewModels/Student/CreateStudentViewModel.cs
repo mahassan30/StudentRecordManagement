@@ -1,5 +1,4 @@
-﻿using DataAccessLayer.MyModels;
-using WebModels.Models;
+﻿using WebModels.Models;
 
 namespace StudentRecordManagement.ViewModels.Student
 {

@@ -2,9 +2,9 @@
 {
     public class Class
     {
-        public int ClassID { get; set; }
-        public string ClassName { get; set; }
+        public int ClassId { get; set; }
+        public string? ClassName { get; set; }
 
-        public string ClassLocation { get; set; }
+        public string? ClassLocation { get; set; }
     }
 }
