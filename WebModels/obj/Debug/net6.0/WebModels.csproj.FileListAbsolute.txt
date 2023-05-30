@@ -1,0 +1,15 @@
+D:\Projects\StudentRecordManagement\WebModels\bin\Debug\net6.0\WebModels.deps.json
+D:\Projects\StudentRecordManagement\WebModels\bin\Debug\net6.0\WebModels.dll
+D:\Projects\StudentRecordManagement\WebModels\bin\Debug\net6.0\WebModels.pdb
+D:\Projects\StudentRecordManagement\WebModels\bin\Debug\net6.0\DomainModels.dll
+D:\Projects\StudentRecordManagement\WebModels\bin\Debug\net6.0\DomainModels.pdb
+D:\Projects\StudentRecordManagement\WebModels\obj\Debug\net6.0\WebModels.csproj.AssemblyReference.cache
+D:\Projects\StudentRecordManagement\WebModels\obj\Debug\net6.0\WebModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\StudentRecordManagement\WebModels\obj\Debug\net6.0\WebModels.AssemblyInfoInputs.cache
+D:\Projects\StudentRecordManagement\WebModels\obj\Debug\net6.0\WebModels.AssemblyInfo.cs
+D:\Projects\StudentRecordManagement\WebModels\obj\Debug\net6.0\WebModels.csproj.CoreCompileInputs.cache
+D:\Projects\StudentRecordManagement\WebModels\obj\Debug\net6.0\WebModels.csproj.CopyComplete
+D:\Projects\StudentRecordManagement\WebModels\obj\Debug\net6.0\WebModels.dll
+D:\Projects\StudentRecordManagement\WebModels\obj\Debug\net6.0\refint\WebModels.dll
+D:\Projects\StudentRecordManagement\WebModels\obj\Debug\net6.0\WebModels.pdb
+D:\Projects\StudentRecordManagement\WebModels\obj\Debug\net6.0\ref\WebModels.dll

@@ -1,6 +1,6 @@
 
+using DataAccessLayer.MyModels;
 using Microsoft.EntityFrameworkCore;
-using StudentRecordManagement.MyModels;
 
 //using StudentRecordManagement.MyModels;
 
@@ -9,11 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews()
     .AddRazorRuntimeCompilation();
-//builder.Services.AddDbContext<StudentRecordContext>(x => 
-//    x.UseSqlServer("Data Source=.;Initial Catalog=StudentRecord;User Id=sa;Password=p@ssw0rd; MultipleActiveResultSets=true"));
 
+//Eager Loading after Onion Architecture
 builder.Services.AddDbContext<StudentRecordContext>(x =>
-    x.UseSqlServer(
+    x.UseLazyLoadingProxies().UseSqlServer(
         "Data Source=.;Initial Catalog=StudentRecord;User Id=sa;Password=p@ssw0rd; MultipleActiveResultSets=true"));
 
 var app = builder.Build();

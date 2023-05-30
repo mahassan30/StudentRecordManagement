@@ -1,16 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using System.Data.SqlClient;
+﻿using DataAccessLayer.MyModels;
+using Mappers;
+using Microsoft.AspNetCore.Mvc;
 using StudentRecordManagement.DataAccess;
-using StudentRecordManagement.MyModels;
-using Student = StudentRecordManagement.Models.Student;
+using StudentRecordManagement.ViewModels.Student;
+using Student = WebModels.Models.Student;
+
 
 namespace StudentRecordManagement.Controllers
 {
     public class StudentController : Controller
     {
         private readonly StudentRecordContext dbContext;
-        private readonly StudentDataAccess _studentDataAccess;
 
         public StudentController(StudentRecordContext dbContext)
         {
@@ -19,7 +19,7 @@ namespace StudentRecordManagement.Controllers
 
         public IActionResult Index()
         {
-            var students = dbContext.Students.ToList();
+            var students = dbContext.Students.Select(x=> x.ConvertToWebModel()).ToList();
 
             //var studentDataAccess = new StudentDataAccess();
             //var studentList = studentDataAccess.GetStudentList();
@@ -28,24 +28,23 @@ namespace StudentRecordManagement.Controllers
 
         public ActionResult<Student> Create(int? id)
         {
+            var viewModel = new CreateStudentViewModel();
 
+            //viewModel.Classes = dbContext.Classes.ToList();
             if (id == null)
             {
-                var student = new MyModels.Student();
-                return View(student);
+                viewModel.Student = new Student();
+                return View(viewModel);
             }
 
-            //var dataAccess = new StudentDataAccess();
-            //var studentFromDb = dataAccess.GetStudent(id.Value);
-
-            var studentToReturn = dbContext.Students.Find(id.Value);
-            return View(studentToReturn);
+            viewModel.Student = dbContext.Students.Find(id.Value).ConvertToWebModel();
+            return View(viewModel);
 
 
         }
 
         [HttpPost]
-        public ActionResult Create(MyModels.Student student)
+        public ActionResult Create(Student student)
         {
             var studentDataAccess = new StudentDataAccess();
             if (student.StudentId > 0)
@@ -66,8 +65,6 @@ namespace StudentRecordManagement.Controllers
 
         public ActionResult Delete(int id)
         {
-            //var studentDataAccess = new StudentDataAccess();
-            //var deleteStudent = studentDataAccess.DeleteStudent(id);
             var studentToDelete = dbContext.Students.Find(id);
             dbContext.Remove(studentToDelete);
             dbContext.SaveChanges();

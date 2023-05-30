@@ -1,4 +1,4 @@
-﻿@model List<StudentRecordManagement.MyModels.Student>
+﻿@model List<WebModels.Models.Student>
 
 <div>
     <div>
@@ -14,18 +14,19 @@
                 <th>Address</th>
                 <th>Class</th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var student in Model)
             {
                 <tr>
-                    <td><a asp-controller="Student" asp-action="Create" asp-route-id="@student.StudentId">@student.StudentFirstName</a></td>
-                    <td>@student.StudentMiddleName</td>
-                    <td>@student.StudentLastName</td>
-                    <td>@student.StudentPhone</td>
-                    <td>@student.StudentAddress</td>
-                    @*<td>@student.ClassName</td>*@
+                    <td><a asp-controller="Student" asp-action="Create" asp-route-id="@student.StudentId">@student.FirstName</a></td>
+                    <td>@student.MiddleName</td>
+                    <td>@student.LastName</td>
+                    <td>@student.Phone</td>
+                    <td>@student.Address</td>
+                    <td>@student.ClassName</td>
                     <td><a asp-controller="Student" asp-action="Delete" asp-route-id="@student.StudentId">Delete</a></td>
                 </tr>
             }

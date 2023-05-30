@@ -1,5 +1,6 @@
 ﻿using StudentRecordManagement.Models;
 using System.Data.SqlClient;
+using WebModels.Models;
 
 namespace StudentRecordManagement.DataAccess
 {
