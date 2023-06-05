@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.MyModels;
+using Interfacces.ServiceInterface;
 using Mappers;
 using Microsoft.AspNetCore.Mvc;
 using StudentRecordManagement.DataAccess;
@@ -10,16 +11,18 @@ namespace StudentRecordManagement.Controllers
 {
     public class StudentController : Controller
     {
-        private readonly StudentRecordContext dbContext;
+        private readonly IStudentInterface studentInterface;
+        private readonly IClassInterface classInterface;
 
-        public StudentController(StudentRecordContext dbContext)
+        public StudentController(IStudentInterface studentInterface, IClassInterface classInterface)
         {
-            this.dbContext = dbContext;
+            this.studentInterface = studentInterface;
+            this.classInterface = classInterface;
         }
 
         public IActionResult Index()
         {
-            var students = dbContext.Students.Select(x=> x.ConvertToWebModel()).ToList();
+            var students = studentInterface.GetAll().Select(x=> x.ConvertToWebModel()).ToList();
             return View(students);
         }
 
@@ -27,14 +30,14 @@ namespace StudentRecordManagement.Controllers
         {
             var viewModel = new CreateStudentViewModel();
 
-            viewModel.Classes = dbContext.Classes.Select(x=>x.ConvertToWebModel()).ToList();
+            viewModel.Classes = classInterface.GetAllClasses().Select(x => x.ConvertToWebModel()).ToList();
             if (id == null)
             {
                 viewModel.Student = new Student();
                 return View(viewModel);
             }
 
-            viewModel.Student = dbContext.Students.Find(id.Value).ConvertToWebModel();
+            viewModel.Student = studentInterface.FindById(id.Value).ConvertToWebModel();
             return View(viewModel);
 
 
@@ -46,23 +49,20 @@ namespace StudentRecordManagement.Controllers
             var studentToSave = student.ConvertToDomainModel();
             if (student.StudentId > 0)
             {
-                dbContext.Update(studentToSave);
+                studentInterface.UpdateStudent(studentToSave);
             }
             else
             {
-                dbContext.Add(studentToSave);
+                studentInterface.AddStudent(studentToSave);
             }
 
-            dbContext.SaveChanges();
             return RedirectToAction("Index");
             
         }
 
         public ActionResult Delete(int id)
         {
-            var studentToDelete = dbContext.Students.Find(id);
-            dbContext.Remove(studentToDelete);
-            dbContext.SaveChanges();
+            studentInterface.DeleteStudent(id);
             return RedirectToAction("Index");
 
         }

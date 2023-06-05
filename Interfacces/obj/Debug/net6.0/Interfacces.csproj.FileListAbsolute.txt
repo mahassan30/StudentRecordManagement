@@ -1,0 +1,15 @@
+D:\Projects\StudentRecordManagement\Interfacces\bin\Debug\net6.0\Interfacces.deps.json
+D:\Projects\StudentRecordManagement\Interfacces\bin\Debug\net6.0\Interfacces.dll
+D:\Projects\StudentRecordManagement\Interfacces\bin\Debug\net6.0\Interfacces.pdb
+D:\Projects\StudentRecordManagement\Interfacces\bin\Debug\net6.0\DomainModels.dll
+D:\Projects\StudentRecordManagement\Interfacces\bin\Debug\net6.0\DomainModels.pdb
+D:\Projects\StudentRecordManagement\Interfacces\obj\Debug\net6.0\Interfacces.csproj.AssemblyReference.cache
+D:\Projects\StudentRecordManagement\Interfacces\obj\Debug\net6.0\Interfacces.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\StudentRecordManagement\Interfacces\obj\Debug\net6.0\Interfacces.AssemblyInfoInputs.cache
+D:\Projects\StudentRecordManagement\Interfacces\obj\Debug\net6.0\Interfacces.AssemblyInfo.cs
+D:\Projects\StudentRecordManagement\Interfacces\obj\Debug\net6.0\Interfacces.csproj.CoreCompileInputs.cache
+D:\Projects\StudentRecordManagement\Interfacces\obj\Debug\net6.0\Interfacces.csproj.CopyComplete
+D:\Projects\StudentRecordManagement\Interfacces\obj\Debug\net6.0\Interfacces.dll
+D:\Projects\StudentRecordManagement\Interfacces\obj\Debug\net6.0\refint\Interfacces.dll
+D:\Projects\StudentRecordManagement\Interfacces\obj\Debug\net6.0\Interfacces.pdb
+D:\Projects\StudentRecordManagement\Interfacces\obj\Debug\net6.0\ref\Interfacces.dll

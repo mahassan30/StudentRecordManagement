@@ -2547,6 +2547,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "DomainModels": "1.0.0",
+          "Interfacces": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.Proxies": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
@@ -2568,6 +2569,19 @@
           "bin/placeholder/DomainModels.dll": {}
         }
       },
+      "Interfacces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DomainModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Interfacces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Interfacces.dll": {}
+        }
+      },
       "Mappers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2580,6 +2594,21 @@
         },
         "runtime": {
           "bin/placeholder/Mappers.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DataAccessLayer": "1.0.0",
+          "DomainModels": "1.0.0",
+          "Interfacces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
         }
       },
       "WebModels/1.0.0": {
@@ -8039,10 +8068,20 @@
       "path": "../DomainModels/DomainModels.csproj",
       "msbuildProject": "../DomainModels/DomainModels.csproj"
     },
+    "Interfacces/1.0.0": {
+      "type": "project",
+      "path": "../Interfacces/Interfacces.csproj",
+      "msbuildProject": "../Interfacces/Interfacces.csproj"
+    },
     "Mappers/1.0.0": {
       "type": "project",
       "path": "../Mappers/Mappers.csproj",
       "msbuildProject": "../Mappers/Mappers.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     },
     "WebModels/1.0.0": {
       "type": "project",
@@ -8053,11 +8092,13 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "DataAccessLayer >= 1.0.0",
+      "Interfacces >= 1.0.0",
       "Mappers >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 6.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.0",
+      "Services >= 1.0.0",
       "System.Data.SqlClient >= 4.8.5",
       "WebModels >= 1.0.0"
     ]
@@ -8092,8 +8133,14 @@
             "D:\\Projects\\StudentRecordManagement\\DataAccessLayer\\DataAccessLayer.csproj": {
               "projectPath": "D:\\Projects\\StudentRecordManagement\\DataAccessLayer\\DataAccessLayer.csproj"
             },
+            "D:\\Projects\\StudentRecordManagement\\Interfacces\\Interfacces.csproj": {
+              "projectPath": "D:\\Projects\\StudentRecordManagement\\Interfacces\\Interfacces.csproj"
+            },
             "D:\\Projects\\StudentRecordManagement\\Mappers\\Mappers.csproj": {
               "projectPath": "D:\\Projects\\StudentRecordManagement\\Mappers\\Mappers.csproj"
+            },
+            "D:\\Projects\\StudentRecordManagement\\Services\\Services.csproj": {
+              "projectPath": "D:\\Projects\\StudentRecordManagement\\Services\\Services.csproj"
             },
             "D:\\Projects\\StudentRecordManagement\\WebModels\\WebModels.csproj": {
               "projectPath": "D:\\Projects\\StudentRecordManagement\\WebModels\\WebModels.csproj"

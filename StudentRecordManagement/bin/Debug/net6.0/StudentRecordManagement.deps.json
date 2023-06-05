@@ -35,11 +35,13 @@
       "StudentRecordManagement/1.0.0": {
         "dependencies": {
           "DataAccessLayer": "1.0.0",
+          "Interfacces": "1.0.0",
           "Mappers": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.0",
+          "Services": "1.0.0",
           "System.Data.SqlClient": "4.8.5",
           "WebModels": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "6.0.0.0",
@@ -1817,6 +1819,7 @@
       "DataAccessLayer/1.0.0": {
         "dependencies": {
           "DomainModels": "1.0.0",
+          "Interfacces": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.Proxies": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
@@ -1836,6 +1839,17 @@
           "DomainModels.dll": {}
         }
       },
+      "Interfacces/1.0.0": {
+        "dependencies": {
+          "DomainModels": "1.0.0"
+        },
+        "runtime": {
+          "Interfacces.dll": {}
+        },
+        "compile": {
+          "Interfacces.dll": {}
+        }
+      },
       "Mappers/1.0.0": {
         "dependencies": {
           "DomainModels": "1.0.0",
@@ -1846,6 +1860,19 @@
         },
         "compile": {
           "Mappers.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "dependencies": {
+          "DataAccessLayer": "1.0.0",
+          "DomainModels": "1.0.0",
+          "Interfacces": "1.0.0"
+        },
+        "runtime": {
+          "Services.dll": {}
+        },
+        "compile": {
+          "Services.dll": {}
         }
       },
       "WebModels/1.0.0": {
@@ -4585,7 +4612,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Interfacces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Mappers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -9,6 +9,7 @@
       "DataAccessLayer/1.0.0": {
         "dependencies": {
           "DomainModels": "1.0.0",
+          "Interfacces": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.Proxies": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
@@ -1259,6 +1260,14 @@
         "runtime": {
           "DomainModels.dll": {}
         }
+      },
+      "Interfacces/1.0.0": {
+        "dependencies": {
+          "DomainModels": "1.0.0"
+        },
+        "runtime": {
+          "Interfacces.dll": {}
+        }
       }
     }
   },
@@ -2130,6 +2139,11 @@
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
     "DomainModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interfacces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

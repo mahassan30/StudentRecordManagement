@@ -9,7 +9,7 @@
         public string? Phone { get; set; }
         public string? Address { get; set; }
         public string? ClassName { get; set; }
-        public int ClassId { get; set; }
+        public int? ClassId { get; set; }
         public string StudentFullName { get; set; }
 
         public Class Class { get; set; }

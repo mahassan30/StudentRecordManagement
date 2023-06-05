@@ -761,3 +761,7 @@ D:\Projects\StudentRecordManagement\StudentRecordManagement\obj\Debug\net6.0\ref
 D:\Projects\StudentRecordManagement\StudentRecordManagement\obj\Debug\net6.0\StudentRecordManagement.pdb
 D:\Projects\StudentRecordManagement\StudentRecordManagement\obj\Debug\net6.0\StudentRecordManagement.genruntimeconfig.cache
 D:\Projects\StudentRecordManagement\StudentRecordManagement\obj\Debug\net6.0\ref\StudentRecordManagement.dll
+D:\Projects\StudentRecordManagement\StudentRecordManagement\bin\Debug\net6.0\Interfacces.dll
+D:\Projects\StudentRecordManagement\StudentRecordManagement\bin\Debug\net6.0\Services.dll
+D:\Projects\StudentRecordManagement\StudentRecordManagement\bin\Debug\net6.0\Interfacces.pdb
+D:\Projects\StudentRecordManagement\StudentRecordManagement\bin\Debug\net6.0\Services.pdb

@@ -1,0 +1,27 @@
+﻿@model List<WebModels.Models.Class>
+
+<div>
+    <div>
+        <button><a class="nav-link" asp-controller="Class" asp-action="Create">Create New</a></button>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Class Name</th>
+                <th>Class Location</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><a asp-controller="Class" asp-action="Create" asp-route-id="@item.ClassId">@item.ClassName</a></td>
+                    <td>@item.ClassLocation</td>
+                    <td><a asp-controller="Class" asp-action="Delete" asp-route-id="@item.ClassId">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

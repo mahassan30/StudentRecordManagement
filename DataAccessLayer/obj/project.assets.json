@@ -2231,6 +2231,19 @@
         "runtime": {
           "bin/placeholder/DomainModels.dll": {}
         }
+      },
+      "Interfacces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DomainModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Interfacces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Interfacces.dll": {}
+        }
       }
     }
   },
@@ -7079,11 +7092,17 @@
       "type": "project",
       "path": "../DomainModels/DomainModels.csproj",
       "msbuildProject": "../DomainModels/DomainModels.csproj"
+    },
+    "Interfacces/1.0.0": {
+      "type": "project",
+      "path": "../Interfacces/Interfacces.csproj",
+      "msbuildProject": "../Interfacces/Interfacces.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "DomainModels >= 1.0.0",
+      "Interfacces >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.0",
       "Microsoft.EntityFrameworkCore.Proxies >= 6.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
@@ -7119,6 +7138,9 @@
           "projectReferences": {
             "D:\\Projects\\StudentRecordManagement\\DomainModels\\DomainModels.csproj": {
               "projectPath": "D:\\Projects\\StudentRecordManagement\\DomainModels\\DomainModels.csproj"
+            },
+            "D:\\Projects\\StudentRecordManagement\\Interfacces\\Interfacces.csproj": {
+              "projectPath": "D:\\Projects\\StudentRecordManagement\\Interfacces\\Interfacces.csproj"
             }
           }
         }

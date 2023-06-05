@@ -1,6 +1,10 @@
 
 using DataAccessLayer.MyModels;
+using DataAccessLayer.Repositories;
+using Interfacces.RepositoryInterface;
+using Interfacces.ServiceInterface;
 using Microsoft.EntityFrameworkCore;
+using Services.Services;
 
 //using StudentRecordManagement.MyModels;
 
@@ -14,6 +18,12 @@ builder.Services.AddControllersWithViews()
 builder.Services.AddDbContext<StudentRecordContext>(x =>
     x.UseLazyLoadingProxies().UseSqlServer(
         "Data Source=.;Initial Catalog=StudentRecord;User Id=sa;Password=p@ssw0rd; MultipleActiveResultSets=true"));
+//Resolve Dependencies for Interfaces
+builder.Services.AddScoped<IStudentInterface, StudentService>();
+builder.Services.AddScoped<IClassInterface, ClassService>();
+builder.Services.AddScoped<IClassRepository, ClassRepository>();
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+
 
 var app = builder.Build();
 

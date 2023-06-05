@@ -16,7 +16,8 @@ namespace Mappers
                 LastName = source.StudentLastName,
                 Address = source.StudentAddress,
                 Phone = source.StudentPhone,
-                ClassName = source.Class?.ClassName
+                ClassName = source.Class?.ClassName,
+                ClassId = source.ClassId
             };
         }
 
@@ -24,6 +25,7 @@ namespace Mappers
         {
             return new Student
             {
+                StudentId = source.StudentId,
                 StudentFirstName = source.FirstName,
                 StudentMiddleName = source.MiddleName,
                 StudentLastName = source.LastName,
